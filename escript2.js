@@ -17,6 +17,14 @@ function escribir(letra){
 
 }
 function verificar(){
+
+    
+    var palabra = '';
+    for(var i = 1 ; i <= 5; i++){
+     palabra += document.getElementById(`cuadro${fila}_${i}`).innerText;
+        
+    }
+    console.log(palabra);
     columna = 0;
     fila++;
 }
