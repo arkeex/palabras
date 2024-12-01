@@ -1,5 +1,5 @@
 var columna = 0, fila = 1;
-var respuestas = ["pollo","fruta"]
+var respuestas = ["pollo","FRUTA"]
 document.addEventListener('keydown', function(event) {
     const tecla = event.keyCode;
     if (tecla >= 65 && tecla <= 90){
@@ -17,14 +17,15 @@ function escribir(letra){
 
 }
 function verificar(){
-
     
-    var palabra = '';
-    for(var i = 1 ; i <= 5; i++){
-     palabra += document.getElementById(`cuadro${fila}_${i}`).innerText;
-        
+    var palabra = [];
+
+    for(let i = 1 ; i <= 5; i++){
+     palabra.push(document.getElementById(`cuadro${fila}_${i}`).innerText);
     }
-    console.log(palabra);
+    const orange = respuestas[1].split("").map(letter => palabra.includes(letter))
+
+    console.log(orange);
     columna = 0;
     fila++;
 }
