@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Capturar Tecla</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #008cba;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #008cba;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #333333;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #008cba;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Presiona cualquier tecla</h1>
+        <p id="keyPressed">Presiona una tecla y aparecerá aquí.</p>
+    </div>
+
+    <script>
+        // Seleccionar el párrafo donde mostraremos la tecla presionada
+        const display = document.getElementById('keyPressed');
+
+        // Agregar un event listener al documento para el evento 'keydown'
+        document.addEventListener('keydown', function(event) {
+            // Obtener la tecla presionada
+            const key = event.key;
+
+            // Mostrar la tecla presionada en el párrafo
+            display.innerHTML = `Tecla presionada: <span class="highlight">${key}</span>`;
+        });
+    </script>
+</body>
+</html>

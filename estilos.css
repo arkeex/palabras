@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    color: white;
+}
+#contenedor{
+    
+    display: flex;
+}
+.cuadro{
+    height: 40px;
+    width: 40px;
+    border-style: solid;            
+    background-color: black;
+    color: wheat;
+    font-size: 30px; 
+    margin: 10px;
+    padding: 5px;
+    display: inline-block;    
+}
